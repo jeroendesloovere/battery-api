@@ -22,7 +22,7 @@ jsFrontendBatteryAPI =
 	 */
 	isCharging: function()
 	{
-		return (jsFrontendBatteryAPI.hasBattery()) ? jsFrontendBatteryAPI.battery.charging : false;
+		return (jsFrontendBatteryAPI.isSupported()) ? jsFrontendBatteryAPI.battery.charging : false;
 	},
 
 	/**
@@ -42,7 +42,7 @@ jsFrontendBatteryAPI =
 	 */
 	getChargingTime: function()
 	{
-		return (jsFrontendBatteryAPI.hasBattery()) ? jsFrontendBatteryAPI.battery.chargingTime : 0;	
+		return (jsFrontendBatteryAPI.isSupported()) ? jsFrontendBatteryAPI.battery.chargingTime : 0;	
 	},
 
 	/**
@@ -52,7 +52,7 @@ jsFrontendBatteryAPI =
 	 */
 	getDischargingTime: function()
 	{
-		return (jsFrontendBatteryAPI.hasBattery()) ? jsFrontendBatteryAPI.battery.dischargingTime : 0;	
+		return (jsFrontendBatteryAPI.isSupported()) ? jsFrontendBatteryAPI.battery.dischargingTime : 0;	
 	},
 
 	/**
@@ -62,7 +62,7 @@ jsFrontendBatteryAPI =
 	 */
 	getLevel: function()
 	{
-		return (jsFrontendBatteryAPI.hasBattery()) ? jsFrontendBatteryAPI.battery.level : 0;	
+		return (jsFrontendBatteryAPI.isSupported()) ? jsFrontendBatteryAPI.battery.level : 0;	
 	}
 }
 
