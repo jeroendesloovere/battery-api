@@ -40,7 +40,7 @@ jsFrontendBatteryAPITest =
 		}
 		else
 		{
-			console.warn('Can\'t reach Battery API');
+			console.warn('Can\'t use Battery API');
 		}
 	}
 }
