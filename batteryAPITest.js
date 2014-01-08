@@ -1,9 +1,9 @@
 /**
- * jsFrontend Battery API test
+ * Battery API test
  *
  * @author Jeroen Desloovere <jeroen@siesqo.be>
  */
-jsFrontendBatteryAPITest =
+batteryAPITest =
 {
 	init: function()
 	{
@@ -45,4 +45,4 @@ jsFrontendBatteryAPITest =
 	}
 }
 
-$(jsFrontendBatteryAPITest.init);
+$(batteryAPITest.init);

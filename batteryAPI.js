@@ -1,9 +1,9 @@
 /**
- * jsFrontend Battery API
+ * Battery API
  *
  * @author Jeroen Desloovere <jeroen@siesqo.be>
  */
-jsFrontendBatteryAPI =
+batteryAPI =
 {
 	battery: false,
 	init: function()
@@ -12,7 +12,7 @@ jsFrontendBatteryAPI =
 		battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
 
 		// redefine core battery
-		if(battery != 'undefined') jsFrontendBatteryAPI.battery = battery;
+		if(battery != 'undefined') batteryAPI.battery = battery;
 	},
 
 	/**
@@ -22,7 +22,7 @@ jsFrontendBatteryAPI =
 	 */
 	isCharging: function()
 	{
-		return (jsFrontendBatteryAPI.isSupported()) ? jsFrontendBatteryAPI.battery.charging : false;
+		return (batteryAPI.isSupported()) ? batteryAPI.battery.charging : false;
 	},
 
 	/**
@@ -32,7 +32,7 @@ jsFrontendBatteryAPI =
 	 */
 	isSupported: function()
 	{
-		return !!(jsFrontendBatteryAPI.battery);
+		return !!(batteryAPI.battery);
 	},
 
 	/**
@@ -42,7 +42,7 @@ jsFrontendBatteryAPI =
 	 */
 	getChargingTime: function()
 	{
-		return (jsFrontendBatteryAPI.isSupported()) ? jsFrontendBatteryAPI.battery.chargingTime : 0;	
+		return (batteryAPI.isSupported()) ? batteryAPI.battery.chargingTime : 0;	
 	},
 
 	/**
@@ -52,7 +52,7 @@ jsFrontendBatteryAPI =
 	 */
 	getDischargingTime: function()
 	{
-		return (jsFrontendBatteryAPI.isSupported()) ? jsFrontendBatteryAPI.battery.dischargingTime : 0;	
+		return (batteryAPI.isSupported()) ? batteryAPI.battery.dischargingTime : 0;	
 	},
 
 	/**
@@ -62,8 +62,8 @@ jsFrontendBatteryAPI =
 	 */
 	getLevel: function()
 	{
-		return (jsFrontendBatteryAPI.isSupported()) ? jsFrontendBatteryAPI.battery.level : 0;	
+		return (batteryAPI.isSupported()) ? batteryAPI.battery.level : 0;	
 	}
 }
 
-$(jsFrontendBatteryAPI.init);
+$(batteryAPI.init);
